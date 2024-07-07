@@ -1,11 +1,11 @@
 import { ApolloServer } from "@apollo/server";
 import { expressMiddleware } from "@apollo/server/express4";
-import { startStandaloneServer } from "@apollo/server/standalone";
-import { typeDefs } from "./schema.js";
+// import { startStandaloneServer } from "@apollo/server/standalone";
+/* import { typeDefs } from "./schema.js";
 import { Query } from "./resolvers/query.js";
 import { Mutation } from "./resolvers/mutation.js";
 import { Genre } from "./resolvers/genre.js";
-import { Course } from "./resolvers/course.js";
+import { Course } from "./resolvers/course.js"; */
 import { db } from "./database.js";
 import express from "express";
 import cors from "cors";
@@ -16,8 +16,8 @@ const schema = await getSchema();
 
 const server = new ApolloServer({
   schema: schema,
-  // typeDefs,
-  // resolvers: { Query, Mutation, Genre, Course },
+  /* typeDefs,
+  // resolvers: { Query, Mutation, Genre, Course }, */
 });
 
 await server.start();
